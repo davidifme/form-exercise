@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Exercise</title>
+</head>
+<body>
+    <form novalidate>
+        <div>
+            <label for="email">
+                <span>Email:</span>
+                <input type="email" name="email" id="email" required minlength="8">
+                <span class="error" data-type="email" aria-live="polite"></span>
+            </label>
+        </div>
+        <div>
+            <label for="country">
+                <span>Country:</span>
+                <input type="text" name="country" id="country" required>
+                <span class="error" data-type="country" aria-live="polite"></span>
+            </label>
+        </div>
+        <div>
+            <label for="zip-code">
+                <span>Zip Code:</span>
+                <input type="text" name="zip-code" id="zip-code" required pattern="^[A-Za-z0-9][A-Za-z0-9\- ]{2,10}[A-Za-z0-9]$">
+                <span class="error" data-type="zip-code" aria-live="polite"></span>
+            </label>
+        </div>
+        <div>
+            <label for="password">
+                <span>Password:</span>
+                <input type="password" name="password" id="password" required minlength="8">
+                <span class="error" data-type="password" aria-live="polite"></span>
+            </label>
+        </div>
+        <div>
+            <label for="password-confirmation">
+                <span>Password Confirmation:</span>
+                <input type="password" name="password-confirmation" id="password-confirmation" required minlength="8">
+                <span class="error" data-type="password-confirmation" aria-live="polite"></span>
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+        <span class="error" data-type="submit" aria-live="polite"></span>
+    </form>
+</body>
+</html>

@@ -54,7 +54,7 @@ function showError(inputElement) {
     } else if (inputElement.validity.tooShort) {
         error.textContent = `Please enter at least ${inputElement.minLength} characters`;
     } else if (inputElement.validity.patternMismatch) {
-        error.textContent = `Invalid ${inputElement.name} format`;
+        error.textContent = `Invalid ${inputElement.name}`;
     } else if (inputElement.name === 'password-confirmation') {
         error.textContent = inputElement.validationMessage;
     }

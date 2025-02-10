@@ -1,10 +1,94 @@
 body {
     display: flex;
-    height: 80vh;
+    height: 95vh;
     justify-content: center;
     align-items: center;
-    background-color: #505050;
+    background-color: #2D3142;
+
+    font-family: 'Balto', 'Poppins', 'Nunito', 'Arial Rounded MT Bold', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 75px;
+    background-color: white;
+    border: solid 10ox #4F5D75;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+.form-container {
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-variant: small-caps;
+    font-size: 20px;
+    color: #2d31428c;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 420px;
+    height: 40px;
+    padding: 0 10px;
+
+    background-color: #DDDDDD;
+    color: #000000;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+}
+
+input:invalid {
+    border: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+input:valid {
+    border: 2px solid rgba(0, 128, 0, 0.3);
+}
+
+#zip-code {
+    width: 130px;
+}
+
+#country {
+    width: 250px;
+}
+
+button {
+    width: 130px;
+    height: 40px;
     color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    background-color: #4F5D75;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .error {
@@ -12,12 +96,12 @@ body {
     width: 100%;
     padding: 0;
 
-    font-size: 80%;
-    color: white;
-    background-color: #900;
+    font-size: 15px;
+    color: rgba(255, 0, 0, 0.769);
     border-radius: 0 0 5px 5px;
 
     box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .error.active {
@@ -30,4 +114,6 @@ body {
 .error-icon {
     width: 30px;
     height: 30px;
+    margin-right: 5px;
+    opacity: 0.8;
 }
